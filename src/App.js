@@ -1,23 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Homepage from './pages/Homepage/Homepage';
+import ItemPage from './pages/ItemPage/ItemPage';
 
 import './App.scss'
 
 class App extends Component {
-  constructor() {
-    super()
 
-    this.state = {
-      displayCocktails: []
-    }
-  }
-
-  componentDidMount() {
-
-  }
 
   render() {
+   
     return (
-      <div className="home">
+      <Router>
         <div className="nav">
           <div className="logo">Logo</div>
           <div className="nav-links">
@@ -25,33 +20,11 @@ class App extends Component {
             <div className="favourites link-item">Favorites</div>
           </div>
         </div>
-        <div className="filter-title-box">
-          <h1 className="title">Cocktail Finder</h1>
-          <input type="text" placeholder="filter drinks" className="filter"/>
-        </div>
-        <div className="cocktails-container">
-          <div className="card">
-            <div>Image</div>
-            <div>Drink Name</div>
-            <div>Drink Info</div>
-          </div>
-          <div className="card">
-            <div>Image</div>
-            <div>Drink Name</div>
-            <div>Drink Info</div>
-          </div>
-          <div className="card">
-            <div>Image</div>
-            <div>Drink Name</div>
-            <div>Drink Info</div>
-          </div>
-          <div className="card">
-            <div>Image</div>
-            <div>Drink Name</div>
-            <div>Drink Info</div>
-          </div>
-        </div>
-      </div>
+        <Switch>
+          <Route exact path='/' component={Homepage}/>
+          <Route exact path='/drink/:drinkId' render={props => (<ItemPage {...props} />)}/>
+        </Switch>
+      </Router>
     )
   }
 }

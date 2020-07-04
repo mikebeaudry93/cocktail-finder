@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
 * {
+    font-family: 'Arimo', sans-serif;
     margin: 0;
 }
 
@@ -26,21 +29,3 @@
     }
 }
 
-.filter-title-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-
-    .title {
-        margin-bottom: 40px;
-    }
-}
-
-.cocktails-container {
-    display: flex;
-    justify-content: space-evenly   ;
-    margin: 0px 40px;
-    flex-wrap: wrap;
-}
