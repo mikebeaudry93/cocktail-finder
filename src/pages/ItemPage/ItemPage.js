@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import './ItemPage.scss'
 
-import { loadItem, addItemToFav} from '../../redux/item/item.actions';
+import { loadItem, addItemToFav } from '../../redux/item/item.actions';
 
 
 
@@ -166,7 +166,7 @@ const mapStateToProps = ({ item }) => ({
 const mapDispatchToProps = dispatch => ({
   loadItem: item => dispatch(loadItem(item)),
   addItemToFav: item => dispatch(addItemToFav(item))
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemPage)
 

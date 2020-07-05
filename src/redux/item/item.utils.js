@@ -5,12 +5,18 @@ export const addItemToArr = (existingItems, itemToAdd) => {
        return existingItems
     }
 
-        return [...existingItems, {...itemToAdd}];
+    return [...existingItems, {...itemToAdd}];
     
 };
 
-// export const isAddedFunc = state => {
-//    if(state === false) {
-//        return state = true
-//    }
+// export const deleteItemfromArr = (exisitingItems, itemToDelete) => {
+
+//     const deleted = exisitingItems.filter(item => 
+//         item.idDrink !== itemToDelete.idDrink
+//     );
+
+//     return deleted
+    
 // }
+
+// deleteItemfromArr(state.drinkFavorites, action.payload)

@@ -3,7 +3,6 @@ import React from 'react'
 import './DrinkCard.scss'
 
 function DrinkCard({ item: { strDrink, strCategory, strAlcoholic, strGlass, strIBA, strDrinkThumb } }) {
-    // console.log(props)
     return (
         <div className="card">
             <img className='img' src={strDrinkThumb} alt="drink"/>

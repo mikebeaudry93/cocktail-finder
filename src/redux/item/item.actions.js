@@ -13,3 +13,8 @@ export const addItemToFav = item => ({
     type: ItemActionTypes.ADD_ITEM_TO_FAV,
     payload: item
 });
+
+export const deleteItem = item => ({
+    type: ItemActionTypes.DELETE_ITEM,
+    payload: item
+})

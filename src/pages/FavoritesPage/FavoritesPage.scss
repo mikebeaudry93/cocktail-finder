@@ -1,0 +1,17 @@
+.f-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-items{
+    height: 300px;
+    margin: auto;
+    color: grey;
+    padding-top: 120px;
+}
+
+.filter-f {
+    margin-top: 90px;
+}

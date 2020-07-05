@@ -1,5 +1,5 @@
 import ItemActionTypes from './item.types';
-import { addItemToArr} from './item.utils'
+import { addItemToArr, deleteItemfromArr} from './item.utils'
 
 const INITIAL_STATE = {
     isAdded: false,
@@ -19,6 +19,11 @@ const itemReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 drinkFavorites: addItemToArr(state.drinkFavorites, action.payload),
             };
+        case ItemActionTypes.DELETE_ITEM:
+            return {
+                ...state,
+                drinkFavorites: state.drinkFavorites.filter(item => item.idDrink !== action.payload.idDrink),
+            }
         default:
             return state;
     }
