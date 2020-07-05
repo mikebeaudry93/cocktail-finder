@@ -16,3 +16,24 @@
         margin-bottom: 40px;
     }
 }
+
+.input {
+    width: 100;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(197, 197, 197, 0.26);
+    border-radius: 16px 0px 16px 0px;
+    border-bottom: 3px solid #DF8E00;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+
+    color: #313131;
+}
+
+.input:focus {
+    background-color: rgba(255,255,255,0.6);
+    
+}

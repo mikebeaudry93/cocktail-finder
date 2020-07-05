@@ -1,5 +1,5 @@
 import ItemActionTypes from './item.types';
-import { addItemToArr, deleteItemfromArr} from './item.utils'
+import { addItemToArr } from './item.utils'
 
 const INITIAL_STATE = {
     isAdded: false,

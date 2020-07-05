@@ -39,7 +39,7 @@ render() {
         <div className="home">
             <div className="filter-title-box">
                 <h1 className="title">The A-list Cocktail Menu</h1>
-                <input type="text" placeholder="Filter drinks" className="filter" onChange={this.handleChange}/>
+                <input type="text" placeholder="Filter drinks" className="input filter" onChange={this.handleChange}/>
             </div>
             <div className="cocktails-container">
                 <DrinkContainer drinks={filteredDrinks} />

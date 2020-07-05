@@ -19,7 +19,7 @@ function FavoritesCard({ item, deleteItem }) {
                 </div>
             </Link>
             <div className='remove-box'>
-                <div onClick={() => deleteItem(item)} className='remove-icon'>x</div>
+                <div onClick={() => deleteItem(item)} className='remove-icon far fa-trash-alt'></div>
             </div>
         </div>
         

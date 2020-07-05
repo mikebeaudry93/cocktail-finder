@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import './ItemPage.scss'
 
-import { loadItem, addItemToFav } from '../../redux/item/item.actions';
+import { loadItem, addItemToFav, deleteItem } from '../../redux/item/item.actions';
 
 
 
@@ -21,14 +21,6 @@ class ItemPage extends Component {
 
       addItemToFav(drinkItem);
 
-      if(this.state.itemAdded === false) { 
-        this.setState(() => ({
-        itemAdded: !this.state.itemAdded
-      })); 
-        setTimeout(function(){
-          this.setState({itemAdded: false});
-        }.bind(this),3000);
-    }
   }
 
  
@@ -48,7 +40,9 @@ class ItemPage extends Component {
     
   render() {
   
-    const { drinkItem } = this.props
+    const { drinkItem, drinkFavorites, deleteItem } = this.props
+
+    const itemMatched = drinkFavorites.find(item => item.idDrink === drinkItem.idDrink)
     
     return (
       <div className='item-page'>
@@ -57,8 +51,9 @@ class ItemPage extends Component {
         <div className="item-page-content">
           <div className="box-title">
             <h3 className="item-page-title">{drinkItem.strDrink}</h3>
-            <button value='submit' onClick={() => this.handleClick()} className='btn'>Add to favorites</button>
-            <div className={`${this.state.itemAdded ? 'item-added': ''} hidden`}>Item Added!</div>
+            {
+              itemMatched ?  <button value='submit' onClick={() => deleteItem(drinkItem)} className='btn btn-has far fa-thumbs-up'></button> : <button value='submit' onClick={() => this.handleClick()} className='btn'>Add to favorites</button> 
+            }
           </div>
           <div className="c-g-i-container">
             <div className="category-glass-container">
@@ -160,13 +155,23 @@ class ItemPage extends Component {
 
 const mapStateToProps = ({ item }) => ({
   drinkItem: item.drinkItem,
-  isAdded: item.isAdded
+  drinkFavorites: item.drinkFavorites
 });
 
 const mapDispatchToProps = dispatch => ({
   loadItem: item => dispatch(loadItem(item)),
-  addItemToFav: item => dispatch(addItemToFav(item))
+  addItemToFav: item => dispatch(addItemToFav(item)),
+  deleteItem: item => dispatch(deleteItem(item))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemPage)
 
+// Message Alert with setState
+// if(this.state.itemAdded === false) { 
+//   this.setState(() => ({
+//   itemAdded: !this.state.itemAdded
+// })); 
+//   setTimeout(function(){
+//     this.setState({itemAdded: false});
+//   }.bind(this),2000);
+// }
