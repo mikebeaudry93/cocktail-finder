@@ -22,7 +22,7 @@ class FavoritesPage extends Component {
        const { drinkFavorites } = this.props
     return (
         <div className='f-page'>
-        <input onChange={this.handleChange} className='input filter-f' type="text" placeholder="Filter favorites"/> 
+        <input onChange={this.handleChange} className='input filter-f' type="text" placeholder="Filter favorites..."/> 
             {   drinkFavorites.length > 0 ? 
                 drinkFavorites.filter(item => item.strDrink.toLowerCase().includes(this.state.filterField.toLowerCase()))
                 .map((item, i)=> 
