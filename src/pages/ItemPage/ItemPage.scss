@@ -1,111 +1,108 @@
 .item-page {
-
     display: flex;
-    font-size: 18px;
-    margin: 20px;
-    line-height: 17px;
-    align-items: center;
-    height: 70vh;
-    width: 100vw;
-
-    &-img{
-        height: 400px;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    line-height: 30px;
+    
+    .item-image {
+        width: 30%;
+        object-fit: cover;
     }
 
-    &-title {
-        font-size: 23px;
-        margin: 10px 50px;
-    }
-
-    &-content {
-        padding-top: 20px;
-        height: 100%;
-        width: 100%;
+    .content-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        width: 60%;
+        margin-left: 30px;
 
-        .box {
-            margin: 30px 50px;
+        .title-container {
+            display: flex;
+            align-items: center;
+
+            .drink-name {
+                margin-right: 20px;
+            }
         }
 
-        .c-g-i-container {
+        .inner-content-container {
             display: flex;
-            margin: 30px 50px;
+            width: 100%;
+            margin-top: 40px;
 
-            .category-glass-container{
-                
-                padding-right: 16px;
-                width: 15vw;
-                height: 150px;
+            .inner-left-content {
+                width: 30%;
+
+                .category-container {
+                    padding-bottom: 34px;
+                }
+
+                .glass-type-container {
+                    padding-bottom: 34px;
+                }
+            }
+
+            .inner-right-content{
+                padding-left: 30px;
+            }
+            
+            .ingredients-content{
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                
+                flex-wrap: wrap;
+                padding: 0px 0px;
+
+                .ingredient {
+                    padding-right: 35px;
+                    line-height: 30px;
+
+                    .amounts {
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+
+        .description-box {
+            // padding-right: 20px;
+
+            .description-content{
+                padding-right: 20px;
             }
         }
     }
 }
 
-.label{
-    color: grey;
-    font-size: 18px;
-    margin: 12px 0px;
+.item-title {
+    color: rgb(114, 114, 114);
 }
 
-.label-ingredients {
-    margin: 0px 50px;
-    position: relative;
-    top: 12px;
+.btn { 
+    background-color:rgba(24, 123, 189, 0.856);
+    color: white;
+    font-size: 13px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    padding: 12px 17px;
+    text-align: center;
+    cursor: pointer;
+    height:40px;
+    // transition: 0.8s;
+ 
 }
 
-.ingredients-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 50px;
+.btn-has{
+    background-color: rgba(29, 216, 191, 0.856)
 }
 
-.measurements {
-    margin-right: 60px;
-    line-height: 30px;
-}
-
-.amount {
-    font-size: 15px;
-}
-
-.box-title {
-    display: flex;
-    align-items: center;
-
-    .btn { 
-        background-color:rgba(24, 123, 189, 0.856);
-        color: white;
-        font-size: 16px;
-        border-radius: 2px;
-        outline: none;
-        border: none;
-        padding: 12px 17px;
-        text-align: center;
-        cursor: pointer;
-        transition: 0.8s;
-        // width: 120px;
-     
-    }
-
-    .btn:hover {
-        opacity: 0.3;
-    }
-
-    .btn-has{
-        background-color: rgba(29, 216, 191, 0.856)
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    .item-added {
-      display: flex;
-    }
-}
+// drinkItem.strDrinkThumb
+// drinkItem.strDrink
+// drinkItem.strCategory
+// drinkItem.strGlass
+// drinkItem.strInstructions
+// drinkItem.strIngredient1
+// drinkItem.strMeasure1
+// drinkItem.strIngredient2
+// drinkItem.strMeasure2
+// drinkItem.strIngredient3

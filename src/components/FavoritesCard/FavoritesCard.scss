@@ -8,6 +8,7 @@
 
     .link {
     display: flex;
+    width: 95%;
     }
 
     .f-image {
@@ -29,12 +30,14 @@
     }
 
     .card-content {
-        padding: 50px 49px;
-        padding-right: 50px;
-        width:65%;
+        padding: 20px 0px 20px 20px;
+        // padding-right: 50px;
+        width:95%;
 
         .description {
             margin: 14px 0px;
+            width: 100%;
+            line-height: 23px;
         }
     }
 
