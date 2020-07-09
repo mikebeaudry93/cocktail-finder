@@ -32,7 +32,7 @@ render() {
     const { displayCocktails, searchField } = this.state
 
      const filteredDrinks = displayCocktails.filter(item => 
-      item.strDrink.toLowerCase().includes(searchField.toLowerCase())
+      item.strIngredient1.toLowerCase().includes(searchField.toLowerCase()) || item.strIngredient2.toLowerCase().includes(searchField.toLowerCase())
      )
 
     return (
