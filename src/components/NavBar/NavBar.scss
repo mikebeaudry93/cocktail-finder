@@ -1,0 +1,135 @@
+.nav-main-container {
+
+    .menu-container {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        color: white;
+        background: rgb(245, 167, 104);
+        z-index: 2;
+        height: 100vh;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        transition: transform 0.3s ease-in-out; 
+        transform: translateX(100%);
+
+        .nav-link-menu {
+            color: white;
+            padding: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .show-menu {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        color: white;
+        background: rgb(245, 167, 104);
+        z-index: 2;
+        height: 100vh;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(0%);
+
+        .nav-link-menu {
+            color: white;
+            padding: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .nav-link-menu:hover {
+            color: black;
+        }
+
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+    color: white;
+
+    .nav-hamburger {
+
+        margin-right: 15px;
+        padding: 25px 20px 20px 20px;
+        z-index: 12;
+        cursor: pointer;
+
+        .close {
+            border-top: 2px solid black;
+            padding: 3px;
+            width: 18px;
+            transform: rotate(-45deg);
+            position: fixed;
+        }
+
+        .close-none {
+            border-top: 2px solid black;
+            padding: 3px;
+            width: 18px;
+            opacity: 0;
+            transform: translate(20px);
+        }
+
+        .close-x {
+            position: fixed;
+            border-top: 2px solid black;
+            padding: 3px;
+            width: 18px;
+            // position: relative;
+            top: 30px;
+            right: 38px;
+            transform: rotate(45deg);
+        }
+
+
+        .line{
+            border-top: 2px solid white;
+            padding: 3px;
+            width: 18px;
+            transition: all 0.3 ease-in-out;
+            transform: translateX(0);
+            transform: rotate(0);
+        }
+    }
+
+    .logo{
+        padding: 20px;
+        margin-left: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        padding: 20px;
+
+        .link-item {
+            margin: 0px 12px;
+        }
+    }
+}
+
+a.nav-link-menu {
+    text-decoration: none;
+    color: white;
+}
+
+a.nav-link-menu:visited { text-decoration: none; color:white }
+a.nav-link-menu:hover { text-decoration: none; color: black }
+a.nav-link-menu:focus { text-decoration: none; color: white }
+a.nav-link-menu:hover, a:active { text-decoration: none; color:white }
+

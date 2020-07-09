@@ -4,38 +4,3 @@
     font-family: 'Arimo', sans-serif;
     margin: 0;
 }
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    height: 60px;
-    background-color: black;
-    color: white;
-
-    .logo{
-        padding: 20px;
-        margin-left: 15px;
-    }
-
-    .nav-links {
-        display: flex;
-        padding: 20px;
-
-        .link-item {
-            margin: 0px 12px;
-        }
-    }
-}
-
-a.nav-link {
-    text-decoration: none;
-    color: white;
-}
-
-a.nav-link:visited { text-decoration: none; color:white }
-a.nav-link:hover { text-decoration: none; color: white }
-a.nav-link:focus { text-decoration: none; color: white }
-a.nav-link:hover, a:active { text-decoration: none; color:white }
-
