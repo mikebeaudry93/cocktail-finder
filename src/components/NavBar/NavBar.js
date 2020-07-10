@@ -16,9 +16,9 @@ function NavBar() {
                 </div>
             </div>
             <div className={ open ? "show-menu" : "menu-container" }>
-                <a href="https://www.michaeljamesbeaudry.com/"><div className="nav-link-menu">Back to site</div></a>
+                <Link to='/favoritelist' onClick={() => setOpen(!open)}><div className="nav-link-menu site">Favorites</div></Link>
                 <Link to='/' onClick={() => setOpen(!open)}><div className="nav-link-menu">Drink list</div></Link>
-                <Link to='/favoritelist' onClick={() => setOpen(!open)}><div className="nav-link-menu">Favorites</div></Link>
+                <a href="https://www.michaeljamesbeaudry.com/"><div className="nav-link-menu site last">Back to site</div></a>
             </div>
         </div>
     )

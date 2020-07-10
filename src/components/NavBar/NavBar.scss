@@ -18,7 +18,7 @@
 
         .nav-link-menu {
             color: white;
-            padding: 30px;
+            // padding: 30px;
             font-size: 20px;
             cursor: pointer;
         }
@@ -42,7 +42,7 @@
 
         .nav-link-menu {
             color: white;
-            padding: 30px;
+            // padding: 30px;
             font-size: 20px;
             cursor: pointer;
         }
@@ -76,6 +76,8 @@
             width: 18px;
             transform: rotate(-45deg);
             position: fixed;
+            // right: 35px;
+            // top: 30px;
         }
 
         .close-none {
@@ -92,7 +94,7 @@
             padding: 3px;
             width: 18px;
             // position: relative;
-            top: 30px;
+            top: 29.4px;
             right: 38px;
             transform: rotate(45deg);
         }
@@ -126,6 +128,23 @@
 a.nav-link-menu {
     text-decoration: none;
     color: white;
+}
+
+.nav-link-menu{
+    letter-spacing: 6px;
+    line-height: 30px;
+    padding-top: 30px;
+    width: 180px;
+    
+}
+
+.site {
+    // margin-top: 30px;
+    border-top: 2px solid rgb(65, 65, 65)
+}
+
+.last  {
+    margin-top: 40px;
 }
 
 a.nav-link-menu:visited { text-decoration: none; color:white }
